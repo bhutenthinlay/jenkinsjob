@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-//@Library ('pse54-mainline-test') _
+@Library ('pse54-mainline-test') _
 
 pipeline {
 
