@@ -1,7 +1,11 @@
 def call () {
-	sh """
-	#!/bin/bash
-	echo 'hello world'
-	exit 0
-	"""
+	def remote = [:]
+	remote.name = 'pse54'
+	remote.host = '172.16.201.131'
+	remote.user = 'vsx0'
+	remote.password = 'vsx0'
+	remote.allowAnyHosts = true
+	stage('Remote SSH') {
+		sshCommand remote: remote, command: "/proc/boot/ls"
+	}
 }
