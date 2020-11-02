@@ -8,7 +8,7 @@ def call () {
 	stage('Remote SSH') {
 		//sshCommand remote: remote, command: "uname -a"
 		//sshCommand remote: remote, command: "use -i libc.so"
-		sshCommand remote: remote, command: "export PATH=$PATH:/proc/boot"
+		sshCommand remote: remote, command: "export PATH="
 		sshCommand remote: remote, command: "echo $PATH"
 		sshCommand remote: remote, command: "ls", sudo: true
 		//sh "ls"
