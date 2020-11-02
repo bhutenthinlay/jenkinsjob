@@ -9,8 +9,8 @@ def call () {
 		sshCommand remote: remote, command: "uname -a"
 		sshCommand remote: remote, command: "use -i libc.so"
 		def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
-		if(commandResult.contain("Password:")){
-			sshCommand remote: remote, command: "root\n"
-		}
+		//if(commandResult.contain("Password:")){
+		//	sshCommand remote: remote, command: "root\n"
+		//}
 	}
 }
