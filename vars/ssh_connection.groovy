@@ -5,6 +5,7 @@ def call () {
 	remote.user = 'vsx0'
 	remote.password = 'vsx0'
 	remote.allowAnyHosts = true
+	remote.pty = true
 	stage('Remote SSH') {
 		//sshCommand remote: remote, command: "uname -a"
 		//sshCommand remote: remote, command: "use -i libc.so"
