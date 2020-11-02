@@ -7,6 +7,9 @@ def call () {
 	remote.allowAnyHosts = true
 	stage('Remote SSH') {
 		sshCommand remote: remote, command: "uname -a"
-		sshCommand remote: remote, command: "use -i libc.so"
+		def commandResult = sshCommand remote: remote, command: "use -i libc.so"
+		echo "Result: " + commandResult
+		//def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
+		
 	}
 }
