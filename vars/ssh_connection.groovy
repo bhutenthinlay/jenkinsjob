@@ -6,11 +6,11 @@ def call () {
 	remote.password = 'vsx0'
 	remote.allowAnyHosts = true
 	stage('Remote SSH') {
-		sshCommand remote: remote, command: "uname -a"
-		sshCommand remote: remote, command: "use -i libc.so"
-		sshCommand remote: remote, command: "export PATH = /proc/boot:$PATH"
-		sshCommand remote: remote, command: "echo $PATH"
-		sshCommand remote: remote, command: "ls"
+		//sshCommand remote: remote, command: "uname -a"
+		//sshCommand remote: remote, command: "use -i libc.so"
+		//sshCommand remote: remote, command: "export PATH = /proc/boot:$PATH"
+		//sshCommand remote: remote, command: "echo $PATH"
+		sshCommand remote: remote, command: "ls", sudo: true
 		//def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
 		//if(commandResult.contain("Password:")){
 		//	sshCommand remote: remote, command: "root\n"
