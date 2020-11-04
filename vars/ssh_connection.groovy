@@ -8,7 +8,7 @@ def call () {
 	remote.allowAnyHosts = true
 	remote.pty = true
 	stage('Remote SSH') {
-		//sshCommand remote: remote, command: "echo ${PATH}"
+		sshCommand remote: remote, command: "echo $PATH"
 		//writeFile file: 'abc.sh', text: 'ls'
 		//sshCommand remote: remote, command: "cd /proc/boot"
 		sshCommand remote: remote, command: "env"
