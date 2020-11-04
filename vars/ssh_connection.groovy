@@ -12,15 +12,15 @@ def call () {
     		//sshScript remote: remote, script: "abc.sh"
 		//sshCommand remote: remote, command: "echo $PATH"
 		//writeFile file: 'abc.sh', text: 'ls'
-		//sshCommand remote: remote, command: "cd /proc/boot"
-		//sshCommand remote: remote, command: "export PATH=/proc/boot:/bin:/usr/bin:/sbin:/usr/sbin:/home/vsx/vsx0/../bin:/home/vsx/vsx0/BIN"
+		sshCommand remote: remote, command: "env"
+		sshCommand remote: remote, command: "PATH=/proc/boot:/bin:/usr/bin:/sbin:/usr/sbin:/home/vsx/vsx0/../bin:/home/vsx/vsx0/BIN ls"
     		//sshScript remote: remote, script: "abc.sh"
 		//sshCommand remote: remote, command: "use -i libc.so"
 		//sshCommand remote: remote, command: "export PATH="
 		//sshCommand remote: remote, command: "echo $PATH"
 		//sshCommand remote: remote, command: "ls"
 		//sh "echo $PATH"
-		def commandResult = sshCommand remote: remote, command: "PATH=/proc/boot:/bin:/usr/bin:/sbin:/usr/sbin:/home/vsx/vsx0/../bin:/home/vsx/vsx0/BIN sh VSX_QNX/pse54_setup.sh"
+		//def commandResult = sshCommand remote: remote, command: "PATH=/proc/boot:/bin:/usr/bin:/sbin:/usr/sbin:/home/vsx/vsx0/../bin:/home/vsx/vsx0/BIN sh VSX_QNX/pse54_setup.sh"
 		//if(commandResult.contain("Password:")){
 		//	sshCommand remote: remote, command: "root\n"
 		//}
