@@ -1,3 +1,4 @@
+#!/usr/bin/groovy
 def call () {
 	def remote = [:]
 	remote.name = 'pse54'
@@ -11,7 +12,7 @@ def call () {
 		//sshCommand remote: remote, command: "use -i libc.so"
 		//sshCommand remote: remote, command: "export PATH="
 		//sshCommand remote: remote, command: "echo $PATH"
-		//sshCommand remote: remote, command: "ls", sudo: true
+		sshCommand remote: remote, command: "ls", sudo: true
 		//sh "echo $PATH"
 		//def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
 		//if(commandResult.contain("Password:")){
