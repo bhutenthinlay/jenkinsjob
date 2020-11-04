@@ -8,8 +8,8 @@ def call () {
 	remote.allowAnyHosts = true
 	remote.pty = true
 	stage('Remote SSH') {
-		writeFile file: 'abc.sh', text: 'export PATH=/proc/boot:/bin:/usr/bin:/sbin:/usr/sbin:/home/vsx/vsx0/../bin:/home/vsx/vsx0/BIN echo $PATH'
-    		sshScript remote: remote, script: "abc.sh"
+		//writeFile file: 'abc.sh', text: 'export PATH=/proc/boot:/bin:/usr/bin:/sbin:/usr/sbin:/home/vsx/vsx0/../bin:/home/vsx/vsx0/BIN echo $PATH'
+    		//sshScript remote: remote, script: "abc.sh"
 		//sshCommand remote: remote, command: "echo $PATH"
 		//writeFile file: 'abc.sh', text: 'ls'
 		//sshCommand remote: remote, command: "cd /proc/boot"
@@ -20,7 +20,7 @@ def call () {
 		//sshCommand remote: remote, command: "echo $PATH"
 		//sshCommand remote: remote, command: "ls"
 		//sh "echo $PATH"
-		//def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
+		def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
 		//if(commandResult.contain("Password:")){
 		//	sshCommand remote: remote, command: "root\n"
 		//}
