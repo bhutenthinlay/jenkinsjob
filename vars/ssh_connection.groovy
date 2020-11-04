@@ -14,7 +14,7 @@ def call () {
 		//sshCommand remote: remote, command: "ls", sudo: true
 		//sh "echo $PATH"
 		writeFile file: 'abc.sh', text: 'pwd'
-    		sshScript remote: remote, script: "abc.sh"
+    		sshScript remote: remote, script: "/bin/sh abc.sh"
 		//def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
 		//if(commandResult.contain("Password:")){
 		//	sshCommand remote: remote, command: "root\n"
