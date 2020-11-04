@@ -10,13 +10,13 @@ def call () {
 	stage('Remote SSH') {
 		//sshCommand remote: remote, command: "echo ${PATH}"
 		//writeFile file: 'abc.sh', text: 'ls'
-		sshCommand remote: remote, command: "cd /proc/boot"
-		sshCommand remote: remote, command: "pwd"
+		//sshCommand remote: remote, command: "cd /proc/boot"
+		sshCommand remote: remote, command: "env"
     		//sshScript remote: remote, script: "abc.sh"
 		//sshCommand remote: remote, command: "use -i libc.so"
 		//sshCommand remote: remote, command: "export PATH="
 		//sshCommand remote: remote, command: "echo $PATH"
-		sshCommand remote: remote, command: "./ls"
+		//sshCommand remote: remote, command: "./ls"
 		//sh "echo $PATH"
 		//def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
 		//if(commandResult.contain("Password:")){
