@@ -10,7 +10,7 @@ def call () {
 	stage('Remote SSH') {
 		//sshCommand remote: remote, command: "echo ${PATH}"
 		//writeFile file: 'abc.sh', text: 'ls'
-		//sshCommand remote: remote, command: "pwd"
+		sshCommand remote: remote, command: "cd /proc/boot"
     		//sshScript remote: remote, script: "abc.sh"
 		//sshCommand remote: remote, command: "use -i libc.so"
 		//sshCommand remote: remote, command: "export PATH="
