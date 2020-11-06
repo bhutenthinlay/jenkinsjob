@@ -8,7 +8,7 @@ def call () {
 	remote.allowAnyHosts = true
 	remote.pty = true
 	stage('Remote SSH') {
-		def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
+		def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh; root\n"
 		//def commandResult = sshCommand remote: remote, command: "pwd"
 		println(commandResult)
 		if(commandResult.indexOf("password")){
