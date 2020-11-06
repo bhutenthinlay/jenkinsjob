@@ -9,7 +9,7 @@ def call () {
 	remote.pty = true
 	stage('Remote SSH') {
 		def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
-		if(commandResult.contains("Enter the root password to proceed")){
+		if(commandResult.indexOf("Enter the root password to proceed")){
 			sshCommand remote: remote, command: "root\n"
 		}
 	}
