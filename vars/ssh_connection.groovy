@@ -21,8 +21,8 @@ def call () {
 		//sshCommand remote: remote, command: "ls"
 		//sh "echo $PATH"
 		def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
-		if(commandResult.contain("Enter the root password to proceed")){
-			sshCommand remote: remote, command: "root\n"
-		}
+		//if(commandResult.contain("Enter the root password to proceed")){
+		//	sshCommand remote: remote, command: "root\n"
+		//}
 	}
 }
