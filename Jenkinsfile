@@ -10,11 +10,15 @@ pipeline {
     agent any
 
     stages {
-        stage ( 'SSH CONNECTION' ) {
+        stage ( 'SSH CONNECTION vsx0' ) {
              steps { 
-                 ssh_connection()
-		    
-             }
-         }
+		     script { ssh_connection("${params.vsx0}") }
+		   }
+	}
+	    stage ( 'SSH CONNECTION root '){
+		    steps {
+			    script { ssh_connection("${params.root}") }
+		    }
+	    }
     }
 }
