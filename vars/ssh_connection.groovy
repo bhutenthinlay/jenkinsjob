@@ -9,8 +9,14 @@ def call (user) {
 	remote.pty = true
 	if(user == "root"){
 	 println("in root")
+		stage('Remote SSH') {
+			sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup2.sh"
+		}
 	}else{
 	 println(" in vsx0")
+		stage('Remote SSH') {
+			sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
+		}
 	}
 	//stage('Remote SSH') {
 	//	def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh; root\n"
