@@ -15,7 +15,7 @@ def call (user) {
 	}else{
 	 println(" in vsx0")
 		stage('Remote SSH') {
-			sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
+			sshCommand remote: remote, command: "sh /home/vsx/vsx0/VSX_QNX/pse54_setup.sh"
 		}
 	}
 	//stage('Remote SSH') {
