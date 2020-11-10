@@ -12,14 +12,14 @@ def call (user) {
 		stage('Remote SSH') {
 			sshCommand remote: remote, command: "sh /home/vsx/vsx0/VSX_QNX/pse54_setup2.sh"
 		}
-	}else{
-	 println(" in vsx0")
+	}else if (user == "vsx0"){
+	 	println(" in vsx0")
 		stage('Remote SSH') {
-			//sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
-			sshCommand remote: remote, command: "/home/vsx/vsx0/../bin/tcc -b -s pse54posix.bld"
-			sshCommand remote: remote, command: "/home/vsx/vsx0/../bin/tcc -b -s pse54xsi.bld"
-			sshCommand remote: remote, command: "/home/vsx/vsx0/../bin/tcc -e -s pse54posix.exec"
-			sshCommand remote: remote, command: "/home/vsx/vsx0/../bin/tcc -e -s pse54xsi.exec"
+			sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
+		}
+	}else{
+	 	stage('Remote SSH') {
+			sshCommand remote: remote, command: "sh VSX_QNX/runtest.sh"
 		}
 	}
 	//stage('Remote SSH') {
