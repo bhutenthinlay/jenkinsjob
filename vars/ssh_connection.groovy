@@ -15,7 +15,11 @@ def call (user) {
 	}else{
 	 println(" in vsx0")
 		stage('Remote SSH') {
-			sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
+			//sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
+			sshCommand remote: remote, command: "tcc -b -s pse54posix.bld"
+			sshCommand remote: remote, command: "tcc -b -s pse54xsi.bld"
+			sshCommand remote: remote, command: "tcc -e -s pse54posix.exec"
+			sshCommand remote: remote, command: "tcc -e -s pse54xsi.exec"
 		}
 	}
 	//stage('Remote SSH') {
