@@ -20,10 +20,5 @@ pipeline {
 			    script { ssh_connection("${params.root}") }
 		   }
 	    }
-	     stage ( 'run test '){
-		    steps {
-			    script { run_test() }
-		   }
-	    }
     }
 }
