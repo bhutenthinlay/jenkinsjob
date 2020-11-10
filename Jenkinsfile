@@ -15,10 +15,10 @@ pipeline {
 		     script { ssh_connection("${params.vsx0}") }
 		   }
 	}
-	    stage ( 'SSH CONNECTION root '){
-		    steps {
-			    script { ssh_connection("${params.root}") }
-		    }
-	    }
+	 //   stage ( 'SSH CONNECTION root '){
+	//	    steps {
+	//		    script { ssh_connection("${params.root}") }
+		//    }
+	//    }
     }
 }
