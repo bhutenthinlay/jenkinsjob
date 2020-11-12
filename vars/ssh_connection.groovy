@@ -20,6 +20,7 @@ def call (user) {
 	}else{
 	 	stage('Remote SSH') {
 			sshCommand remote: remote, command: "sh VSX_QNX/runtest.sh"
+			sleep 5
 		}
 	}
 	//stage('Remote SSH') {
