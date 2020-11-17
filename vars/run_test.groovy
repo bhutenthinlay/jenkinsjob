@@ -3,12 +3,12 @@ def call () {
 	def remote = [:]
 	remote.name = 'pse54'
 	remote.host = '172.16.201.131'
-	remote.user = 'vsx0'
-	remote.password = 'vsx0'
+	remote.user = 'root'
+	remote.password = 'root'
 	remote.allowAnyHosts = true
 	remote.pty = true
 	 	stage('Remote SSH') {
-			sshCommand remote: remote, command: "sh VSX_QNX/runtest.sh"
+			sshCommand remote: remote, command: "sh /home/vsx/vsx0/VSX_QNX/runtest.sh"
 		}
 	
 	//stage('Remote SSH') {
