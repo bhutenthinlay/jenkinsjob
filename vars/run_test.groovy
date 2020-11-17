@@ -8,7 +8,7 @@ def call () {
 	remote.allowAnyHosts = true
 	remote.pty = true
 	 	stage('Remote SSH') {
-			sshCommand remote: remote, command: "sh /home/vsx/vsx0/VSX_QNX/runtest.sh"
+			sshCommand remote: remote, command: "cd /home/vsx/vsx0 sh VSX_QNX/runtest.sh"
 		}
 	
 	//stage('Remote SSH') {
