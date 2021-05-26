@@ -5,7 +5,7 @@ def call () {
 	remote.host = '172.16.201.134'
 	remote.user = 'vsx0'
 	remote.password = 'vsx0'
- 	remote.allowAnyHosts = true
+ 	remote.allowAnyHosts = false
 // 	remote.logLevel = 'FINEST'
 // 	remote.pty = true
 // 	 	stage('Remote SSH') {
