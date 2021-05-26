@@ -15,10 +15,10 @@ def call () {
 		println("Running commands")
 		def commandResult = sshCommand remote: remote, command: "sh VSX_QNX/pse54_setup.sh"
 // 		def commandResult = sshCommand remote: remote, command: "pwd"
-		println(commandResult)
-		if(commandResult.indexOf("password")){
-			sshCommand remote: remote, command: "root\n"
-			println("yes it works")
+// 		println(commandResult)
+// 		if(commandResult.indexOf("password")){
+// 			sshCommand remote: remote, command: "root\n"
+// 			println("yes it works")
 		}
 	}
 }
