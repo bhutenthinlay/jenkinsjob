@@ -8,7 +8,7 @@ def call (user) {
 	remote.allowAnyHosts = true
 	remote.pty = true
 	if(user == "root"){
-	 println("in root")
+	 	println("in root")
 		stage('Remote SSH') {
 			sshCommand remote: remote, command: "sh /home/vsx/vsx0/VSX_QNX/pse54_setup2.sh"
 		}
