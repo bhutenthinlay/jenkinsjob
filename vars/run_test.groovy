@@ -19,6 +19,6 @@ def call () {
 // 		if(commandResult.indexOf("password")){
 // 			sshCommand remote: remote, command: "root\n"
 // 			println("yes it works")
-		}
+// 		}
 	}
 }
