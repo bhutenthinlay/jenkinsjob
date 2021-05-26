@@ -6,7 +6,7 @@ def call () {
 	remote.user = 'vsx0'
 	remote.password = 'vsx0'
  	remote.allowAnyHosts = true
-	remote.logLevel = 'FINEST'
+// 	remote.logLevel = 'FINEST'
 // 	remote.pty = true
 // 	 	stage('Remote SSH') {
 // 			sshCommand remote: remote, command: "sh /home/vsx/vsx0/VSX_QNX/runtest.sh"
