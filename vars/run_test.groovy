@@ -5,7 +5,7 @@ def call () {
 	remote.host = '172.16.201.134'
 	remote.user = 'vsx0'
 	remote.password = 'vsx0'
-	remote.allowAnyHosts = true
+// 	remote.allowAnyHosts = true
 // 	remote.pty = true
 // 	 	stage('Remote SSH') {
 // 			sshCommand remote: remote, command: "sh /home/vsx/vsx0/VSX_QNX/runtest.sh"
