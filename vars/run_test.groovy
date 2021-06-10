@@ -27,6 +27,8 @@ def call(){
 	sh """
 	#!/bin/bash
 	pwd
+	cd /home/tthinlay/Desktop/muon/workspace/sdp
+	source /home/tthinlay/Desktop/muon/workspace/sdp/qnxsdp-env.sh
 	exit 0
 	"""
 }
